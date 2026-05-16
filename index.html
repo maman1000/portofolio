@@ -332,5 +332,37 @@
         <p>© 2026 Maman Darusman - Software Developer</p>
       </footer>
     </main>
+    <script>
+      // Tombol Hire Me
+      const hireBtn = document.querySelector(
+        ".bg-indigo-600.text-white.px-8.py-3",
+      );
+      if (hireBtn) {
+        hireBtn.addEventListener("click", () => {
+          alert(
+            "📧 Terima kasih! Silakan kirim email ke: maman@darusman.com\n\nAtau hubungi via LinkedIn saya.",
+          );
+        });
+      }
+
+      // Tombol Contact Me
+      const contactBtns = document.querySelectorAll("#contact button");
+      contactBtns.forEach((btn) => {
+        if (
+          btn.textContent.includes("Contact Me") ||
+          btn.textContent.includes("GitHub")
+        ) {
+          btn.addEventListener("click", (e) => {
+            if (btn.textContent.includes("Contact Me")) {
+              alert(
+                "📝 Silakan isi form kontak di bawah atau kirim email ke maman@darusman.com",
+              );
+            } else if (btn.textContent.includes("GitHub")) {
+              alert("🔗 GitHub: github.com/mamandarusman (demo)");
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
